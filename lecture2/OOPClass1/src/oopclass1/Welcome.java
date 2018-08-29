@@ -13,11 +13,11 @@ import java.util.Scanner;
  */
 public class Welcome {
     public static void main(String[] args) {
-        //Welcome.OOP();
-        //System.out.println();
-        //Welcome.CelsiusToFahren();
-        //System.out.println();
-        Welcome.InfiniteCircleArea();
+        Welcome.OOP();
+        System.out.println();
+        Welcome.CelsiusToFahren();
+        System.out.println();
+        Welcome.CircleArea();
         
         
         
@@ -42,18 +42,5 @@ public class Welcome {
         
         //Display results
         System.out.println("The area for a circle with a radius of " + radius + " units is " + area + " square units.");
-    }
-    public static void InfiniteCircleArea(){
-        double radius;
-        double area;
-        radius = 0;
-        while (radius <= 100){
-            area = radius * radius * 3.1415916;
-            System.out.println("The area for a circle with a radius of " + radius + " units is " + area + " square units.");
-            System.out.println();
-            radius = radius + 1;
-        }
-            
-             
     }
 }
