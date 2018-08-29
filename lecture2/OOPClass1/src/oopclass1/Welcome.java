@@ -31,13 +31,11 @@ public class Welcome {
         System.out.println("35 °C is " + ((9.0 / 5.0) * 35 + 32) + " °F");
     }
     public static void CircleArea(){
+        //Ask for radius
         System.out.print("Enter a radius value: ");
         Scanner input = new Scanner(System.in);
         double radius = input.nextDouble();
         double area;
-        
-        //Assign radius
-        radius = 20;
         
         //Computer Area
         area = radius * radius * 3.1415916;
