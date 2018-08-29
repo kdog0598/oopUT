@@ -18,6 +18,7 @@ public class Welcome {
         Welcome.CelsiusToFahren();
         System.out.println();
         Welcome.CircleArea();
+        System.out.println();
         
         
         
