@@ -5,17 +5,21 @@
  */
 package oopclass1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author kwilson38
  */
 public class Welcome {
     public static void main(String[] args) {
-        Welcome.OOP();
-        System.out.println();
-        Welcome.CelsiusToFahren();
-        System.out.println();
+        //Welcome.OOP();
+        //System.out.println();
+        //Welcome.CelsiusToFahren();
+        //System.out.println();
         Welcome.CircleArea();
+        
+        
         
     }
     public static void OOP(){
@@ -27,7 +31,9 @@ public class Welcome {
         System.out.println("35 °C is " + ((9.0 / 5.0) * 35 + 32) + " °F");
     }
     public static void CircleArea(){
-        double radius;
+        System.out.print("Enter a radius value: ");
+        Scanner input = new Scanner(System.in);
+        double radius = input.nextDouble();
         double area;
         
         //Assign radius
