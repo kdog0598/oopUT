@@ -13,13 +13,15 @@ import java.util.Scanner;
  */
 public class Welcome {
     public static void main(String[] args) {
-        Welcome.OOP();
-        System.out.println();
-        Welcome.CelsiusToFahren();
-        System.out.println();
-        Welcome.CircleArea();
-        System.out.println();
-        
+        //Welcome.OOP();
+        //System.out.println();
+        //Welcome.CelsiusToFahren();
+        //System.out.println();
+        //Welcome.CircleArea();
+        //System.out.println();
+        //Welcome.Summ();
+        //Welcome.RectArea();
+        Welcome.Speed();
         
         
     }
@@ -43,5 +45,50 @@ public class Welcome {
         
         //Display results
         System.out.println("The area for a circle with a radius of " + radius + " units is " + area + " square units.");
+    }
+    
+    public static void Summ(){
+        double sum;
+        sum = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
+        System.out.println(sum);
+    }
+    
+    public static void RectArea(){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter width: ");
+        double width = input.nextDouble();
+        
+        System.out.println("Enter height: ");
+        double height = input.nextDouble();
+        
+        double area;
+        area = width * height;
+        
+        double perimeter;
+        perimeter = 2 * (width + height);
+        
+        System.out.println("For a rectangle with a width of " + width + " and a height of " + height + ", the area is " + area + " and perimeter is " + perimeter + ".");
+        
+    }
+    
+    public static void Speed(){
+        double hours = 1;
+        double min = 40;
+        double sec = 35.0;
+        
+        double totalmin;
+        double totalhours;
+        totalmin = 40 + (sec/60);
+        totalhours = 1 + (totalmin/60);
+        
+        //System.out.println(hours);
+        double miles;
+        miles = 24;
+        double km;
+        km = miles * 1.60934;
+        double kmperh;
+        kmperh = km / 60;
+        System.out.println("A " + miles + " mile run that lasts " + hours + " hour(s) " + min + " minute(s) and " + sec + " second(s) has an average speed of " + kmperh + " km/h.");
     }
 }
