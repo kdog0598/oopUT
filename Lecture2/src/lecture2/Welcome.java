@@ -22,7 +22,8 @@ public class Welcome {
         //Welcome.Summ();
         //Welcome.RectArea();
         //Welcome.Speed();
-        Welcome.SecondsToMinutes();
+        //Welcome.secondsToMinutes();
+        Welcome.byteTest();
         
         
     }
@@ -30,11 +31,11 @@ public class Welcome {
         System.out.println("Welcome to Java!");
         System.out.println("This is a Java Class.");    
     }
-    public static void CelsiusToFahren(){
+    public static void celsiusToFahren(){
         System.out.println();
         System.out.println("35 °C is " + ((9.0 / 5.0) * 35 + 32) + " °F");
     }
-    public static void CircleArea(){
+    public static void circleArea(){
         //Ask for radius
         System.out.print("Enter a radius value: ");
         Scanner input = new Scanner(System.in);
@@ -48,13 +49,13 @@ public class Welcome {
         System.out.println("The area for a circle with a radius of " + radius + " units is " + area + " square units.");
     }
     
-    public static void Summ(){
+    public static void summ(){
         double sum;
         sum = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
         System.out.println(sum);
     }
     
-    public static void RectArea(){
+    public static void rectArea(){
         Scanner input = new Scanner(System.in);
         
         System.out.println("Enter width: ");
@@ -73,7 +74,7 @@ public class Welcome {
         
     }
     
-    public static void Speed(){
+    public static void speed(){
         double hours = 1;
         double min = 40;
         double sec = 35.0;
@@ -92,7 +93,7 @@ public class Welcome {
         kmperh = km / totalhours;
         System.out.println("A " + miles + " mile run that lasts " + hours + " hour(s) " + min + " minute(s) and " + sec + " second(s) has an average speed of " + kmperh + " km/h.");
     }
-    public static void SecondsToMinutes(){
+    public static void secondsToMinutes(){
         Scanner input = new Scanner(System.in);
         System.out.print("Input seconds: ");
         int seconds = input.nextInt();
@@ -101,5 +102,12 @@ public class Welcome {
         minutes = seconds / 60;
         seconds %= 60;
         System.out.println(OrigSeconds + " seconds is equal to " + minutes + " minutes and " + seconds + " seconds.");
+    }
+    public static void byteTest(){
+        byte test = 127;
+        System.out.println(test);
+        test += 1;
+        System.out.println(test);
+        
     }
 }
