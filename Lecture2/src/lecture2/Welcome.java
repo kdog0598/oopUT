@@ -21,7 +21,8 @@ public class Welcome {
         //System.out.println();
         //Welcome.Summ();
         //Welcome.RectArea();
-        Welcome.Speed();
+        //Welcome.Speed();
+        Welcome.SecondsToMinutes();
         
         
     }
@@ -88,7 +89,17 @@ public class Welcome {
         double km;
         km = miles * 1.60934;
         double kmperh;
-        kmperh = km / 60;
+        kmperh = km / totalhours;
         System.out.println("A " + miles + " mile run that lasts " + hours + " hour(s) " + min + " minute(s) and " + sec + " second(s) has an average speed of " + kmperh + " km/h.");
+    }
+    public static void SecondsToMinutes(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input seconds: ");
+        int seconds = input.nextInt();
+        int OrigSeconds = seconds;
+        int minutes;
+        minutes = seconds / 60;
+        seconds %= 60;
+        System.out.println(OrigSeconds + " seconds is equal to " + minutes + " minutes and " + seconds + " seconds.");
     }
 }
