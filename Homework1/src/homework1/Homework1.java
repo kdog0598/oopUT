@@ -26,15 +26,15 @@ public class Homework1 {
     public static void gallonsToLiters(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter gallons: ");
-        float gallons = input.nextFloat();
-        float liters = gallons * 3.785412F;
-        System.out.println(gallons + " gallons equals " + liters + " liters.");
+        double gallons = input.nextDouble();
+        double liters = gallons * 3.785412;
+        System.out.println(gallons + " gallons equals " + (Math.round(liters * 100.0) / 100.0) + " liters.");
     }
     
     public static void sumOfSquares(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter 4-digit number: ");
-        int userdigits = userdigits = input.nextInt();
+        int userdigits = input.nextInt();
         int origuserdigits = userdigits;
         int digit1 = userdigits % 10;
         userdigits /= 10;
