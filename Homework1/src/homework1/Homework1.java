@@ -17,12 +17,18 @@ import java.util.Scanner;
 public class Homework1 {
     
     public static void main(String[] args) {
-        //Homework1.sumOfSquares();
+        Homework1.gallonsToLiters();
+        Homework1.sumOfSquares();
         Homework1.sphereCircleArea();
+        Homework1.gradeTable();
     }
     
     public static void gallonsToLiters(){
-        
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter gallons: ");
+        float gallons = input.nextFloat();
+        float liters = gallons * 3.785412F;
+        System.out.println(gallons + " gallons equals " + liters + " liters.");
     }
     
     public static void sumOfSquares(){
@@ -44,7 +50,24 @@ public class Homework1 {
         System.out.print("Enter radius: ");
         double radius = input.nextDouble();
         double surfacearea = 4 * Math.PI * Math.pow(radius, 2);
-        System.out.println("The surface area for a sphere with radius, " + radius + " units, is " + surfacearea + " units cubed.");
+        System.out.println("The surface area for a sphere with radius, " + radius + " units, is " + (Math.round(surfacearea *100.0)/100.0) + " units cubed.");
+    }
+    
+    public static void gradeTable(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Phyiscs grade: ");
+        int physicsgrade = input.nextInt();
+        System.out.print("\nEnter Chemistry grade: ");
+        int chemgrade = input.nextInt();
+        System.out.print("\nEnter Maths grade: ");
+        int mathgrade = input.nextInt();
+        float physicspercent =  Math.round(((physicsgrade / 150F) * 100.0F) * 100F ) / 100.0F;
+        float chempercent =  Math.round(((chemgrade / 150F) * 100.0F) * 100F ) / 100.0F;
+        float mathpercent =  Math.round(((mathgrade / 150F) * 100.0F) * 100F ) / 100.0F;
+        System.out.println("Subject     Marks Obtained      Total Marks     Percentage");
+        System.out.println("Physics          " + physicsgrade + "                150            " + physicspercent + "  ");
+        System.out.println("Chemistry        " + chemgrade + "                150            " + chempercent + "  ");
+        System.out.println("Maths            " + mathgrade + "                150            " + mathpercent + "  ");
     }
     
 }
