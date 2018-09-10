@@ -23,7 +23,8 @@ public class Welcome {
         //Welcome.RectArea();
         //Welcome.Speed();
         //Welcome.secondsToMinutes();
-        Welcome.byteTest();
+        //Welcome.byteTest();
+        Welcome.bmiCalc();
         
         
     }
@@ -108,6 +109,51 @@ public class Welcome {
         System.out.println(test);
         test += 1;
         System.out.println(test);
+    }
+    
+    public static void bmiCalc(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input weight in pounds: ");
+        float weight = input.nextFloat();
+        System.out.print("\nInput inches in inches: ");
+        float height = input.nextFloat();
+        float bmi = weight / height / height * 703;
+        String bmiindex = null;
+        if (bmi < 15){
+            bmiindex = "very severly underweight";
+        }
+        else if (bmi < 16){
+            bmiindex = "severly underweight";
+        }
+        else if (bmi < 18.5){
+            bmiindex = "underweight";
+        }
+        else if (bmi < 25){
+            bmiindex = "normal";
+        }
+        else if (bmi < 30){
+            bmiindex = "overweight";
+        }
+        else if (bmi < 35){
+            bmiindex = "moderately obese";
+        }
+        else if (bmi < 40){
+            bmiindex = "severly obese";
+        }
+        else if (bmi < 45){
+            bmiindex = "very severly obese";
+        }
+        else if (bmi < 50){
+            bmiindex = "morbidly obese";
+        }
+        else if (bmi < 60){
+            bmiindex = "super obese";
+        }
+        else if (bmi > 60){
+            bmiindex = "hyper obese";
+        }
         
+        System.out.println("Your BMI is "+bmi+". This is categorized as " + bmiindex + ".");
+        //System.out.println(bmi);
     }
 }
