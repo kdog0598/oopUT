@@ -23,6 +23,8 @@ public class Homework1 {
         Homework1.gradeTable();
     }
     
+    //Problem 1
+    
     public static void gallonsToLiters(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter gallons: ");
@@ -30,6 +32,8 @@ public class Homework1 {
         double liters = gallons * 3.785412;
         System.out.println(gallons + " gallons equals " + (Math.round(liters * 100.0) / 100.0) + " liters.");
     }
+    
+    //Problem 2
     
     public static void sumOfSquares(){
         Scanner input = new Scanner(System.in);
@@ -45,6 +49,9 @@ public class Homework1 {
         int digit4 = userdigits % 10;
         System.out.println("The sum of the sqaures of the digits of " + origuserdigits + " is " + (Math.pow(digit1, 2) + Math.pow(digit2, 2) + Math.pow(digit3, 2) + Math.pow(digit4, 2)) + ".");
     }
+    
+    //Problem 3
+    
     public static void sphereCircleArea(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter radius: ");
@@ -52,6 +59,8 @@ public class Homework1 {
         double surfacearea = 4 * Math.PI * Math.pow(radius, 2);
         System.out.println("The surface area for a sphere with radius, " + radius + " units, is " + (Math.round(surfacearea *100.0)/100.0) + " units cubed.");
     }
+    
+    //Problem 4
     
     public static void gradeTable(){
         Scanner input = new Scanner(System.in);
