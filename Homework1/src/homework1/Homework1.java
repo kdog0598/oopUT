@@ -38,8 +38,8 @@ public class Homework1 {
     public static void sumOfSquares(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter 4-digit number: ");
-        int userdigits = input.nextInt();
-        int origuserdigits = userdigits;
+        int origuserdigits = input.nextInt();
+        int userdigits = origuserdigits;
         int digit1 = userdigits % 10;
         userdigits /= 10;
         int digit2 = userdigits % 10;
