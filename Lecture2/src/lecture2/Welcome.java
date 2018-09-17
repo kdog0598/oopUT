@@ -26,7 +26,8 @@ public class Welcome {
         //Welcome.byteTest();
         //Welcome.bmiCalc();
         //Welcome.birthdayGuess(args);
-        Welcome.irregularArea();
+        //Welcome.irregularArea();
+        Welcome.characterStuff();
         
         
     }
@@ -266,4 +267,12 @@ public class Welcome {
         System.out.println(area);
     }
 
+    public static void characterStuff(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        String s = input.nextLine();
+        char ch = s.charAt(0);
+        System.out.println(ch);
+        
+    }
 }
