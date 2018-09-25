@@ -5,6 +5,7 @@
  */
 package homework2;
 
+import static java.lang.Math.sin;
 import java.util.Scanner;
 
 /**
@@ -17,9 +18,9 @@ public class Homework2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        checkTriangle();
-        checkCircle();
-            
+        //checkTriangle();
+        //checkCircle();
+        findArea();
     }
     
     public static void checkCircle(){
@@ -75,6 +76,23 @@ public class Homework2 {
         length = (int) Math.pow((Math.pow((x2-x1), 2) + Math.pow((y2-y1),2)), 1/2);
         return length;
         
+    }
+    
+    public static double findAngle(double angle_a){
+        double angle_c = 180 - 90 - angle_a;
+        return angle_c;
+    }
+    
+    public static void findArea(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input side: ");
+        double side_c = input.nextDouble();
+        System.out.print("Enter angle: ");
+        double angle_a = input.nextDouble();
+        double angle_c = findAngle(angle_a);
+        double side_a = (side_c * sin(angle_a))/sin(angle_c);
+        double area = (side_a*side_c)/2;
+        System.out.println("The area is " + area + ".");
     }
     
     
