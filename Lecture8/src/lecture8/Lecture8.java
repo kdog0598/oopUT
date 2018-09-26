@@ -12,18 +12,29 @@ import java.util.Scanner;
  * @author kwilson38
  */
 public class Lecture8 {
-    public static int sum(int i1, int i2) {
-        int result = 0; 
-        for (int i = i1; i <= i2; i++) 
-            result += i; 
-  	
-        return result; 
+//    public static double printSum(int x1, int x2) {
+//        return x1 + x2;
+//    }
+//    
+//    public static double printSum(int x1, double x2) {
+//        return x1 + x2;
+//    }
+//    
+//    public static double printSum(double x1, int x2) {
+//        return x1 + x2;
+//    }
+    
+    public static double printSum(double x1, double x2) {
+        return x1 + x2;
     }
     
     public static void main(String[] args) {
-        System.out.println("Sum from 1 to 10 is " + sum(1,10));
-        System.out.println("Sum from 20 to 37 is " + sum(20,37));
-        System.out.println("Sum from 35 to 45 is " + sum(35,45));
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Enter numbers: ");
+//        double x1 = input.nextDouble();
+//        double x2 = input.nextDouble();
+        System.out.printf("The sum is %.4f",printSum((double) 2, (double) 8.453));
+        System.out.println();
     }
     
 }
