@@ -20,7 +20,8 @@ public class Homework2 {
     public static void main(String[] args) {
 //        checkTriangle();
 //        checkCircle();
-        findArea();
+//        findArea();
+        checkLicense();
     }
     
     public static void checkCircle(){
@@ -96,6 +97,17 @@ public class Homework2 {
     }
     
     
-    
+    public static void checkLicense(){
+        Scanner input = new Scanner(System.in);
+        boolean alphaIsValid = true;
+        boolean numIsValid = true;
+        while (alphaIsValid == true && numIsValid == true){
+            System.out.print("Input License plate: ");
+            String license = input.next();
+            alphaIsVailid = license.startsWith([A-z]);
+            //System.out.println(license);
+        }            
+        
+    }
     
 }
