@@ -21,7 +21,8 @@ public class Homework2 {
 //        checkTriangle();
 //        checkCircle();
 //        findArea();
-        checkLicense();
+//        checkLicense();
+        countVowels();
     }
     
     public static void checkCircle(){
@@ -99,15 +100,27 @@ public class Homework2 {
     
     public static void checkLicense(){
         Scanner input = new Scanner(System.in);
-        boolean alphaIsValid = true;
-        boolean numIsValid = true;
-        while (alphaIsValid == true && numIsValid == true){
+        boolean licenseIsValid = true;
+        while (licenseIsValid == true){
             System.out.print("Input License plate: ");
             String license = input.next();
-            alphaIsVailid = license.startsWith([A-z]);
-            //System.out.println(license);
+            licenseIsValid = license.matches("(?i)[a-z]{3}\\d{4}");
+            //System.out.println(licenseIsValid);
         }            
         
+    }
+    
+    public static void countVowels(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String str = input.nextLine();
+        int vowels = 0;
+        for (int i = 0; i < str.length(); i++){
+            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u'){
+                vowels++;
+            }
+        }
+        System.out.println("The string \"" + str + "\" has " + vowels + " vowels.");
     }
     
 }
