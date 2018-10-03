@@ -9,8 +9,9 @@ import static java.lang.Math.sin;
 import java.util.Scanner;
 
 /**
- *
- * @author kwilson38
+ * Java Homework 2
+ * Kieran Wilson
+ * 
  */
 public class Homework2 {
 
@@ -18,13 +19,14 @@ public class Homework2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        checkTriangle();
-//        checkCircle();
-//        findArea();
-//        checkLicense();
+        checkTriangle();
+        checkCircle();
+        findArea();
+        checkLicense();
         countVowels();
     }
     
+//    Problem 1
     public static void checkCircle(){
         Scanner input = new Scanner(System.in);
         
@@ -46,6 +48,7 @@ public class Homework2 {
             System.out.println("Circle 2 does not overlap Circle 1");
     }
     
+//    Problem 2
     public static void checkTriangle(){
         Scanner input = new Scanner(System.in);
         //input coords
@@ -80,24 +83,19 @@ public class Homework2 {
         
     }
     
-    public static double findAngle(double angle_a){
-        double angle_c = 180 - 90 - angle_a;
-        return angle_c;
-    }
-    
+//    Problem 3
     public static void findArea(){
         Scanner input = new Scanner(System.in);
         System.out.print("Input side: ");
-        double side_c = input.nextDouble();
+        double side_a = input.nextDouble();
         System.out.print("Enter angle: ");
         double angle_a = input.nextDouble();
-        double angle_c = findAngle(angle_a);
-        double side_a = (side_c * sin(angle_a))/sin(angle_c);
-        double area = (side_a*side_c)/2;
+        double side_b = side_a*Math.tan(angle_a);
+        double area = (side_a*side_b)/2;
         System.out.println("The area is " + area + ".");
     }
     
-    
+//    Problem 4
     public static void checkLicense(){
         Scanner input = new Scanner(System.in);
         boolean licenseIsValid = true;
@@ -110,6 +108,7 @@ public class Homework2 {
         
     }
     
+//    Problem 5
     public static void countVowels(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter string: ");
