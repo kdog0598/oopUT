@@ -273,6 +273,5 @@ public class Welcome {
         String s = input.nextLine();
         char ch = s.charAt(0);
         System.out.println(ch);
-        
     }
 }
