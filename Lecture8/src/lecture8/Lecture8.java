@@ -30,15 +30,15 @@ public class Lecture8 {
 //    }
     
     public static void main(String[] args) {
-//        int[] values = new int[5000];
-//        for (int i = 1; i < values.length; i++){
-//            values[i]=(int) (Math.random()*100);
-//        }
-////        values[0]=values[1]+values[500];
-//        System.out.println(Arrays.toString(values));
-//        Arrays.sort(values);
-//        System.out.println(Arrays.toString(values));
-        gradeExam();
+        int[] values = new int[5000];
+        for (int i = 1; i < values.length; i++){
+            values[i]=	(int)(Math.random() * (65535 + 1));
+        }
+//        values[0]=values[1]+values[500];
+        System.out.println(Arrays.toString(values));
+        Arrays.sort(values);
+        System.out.println(Arrays.toString(values));
+//        gradeExam();
     }
     
 //    public static void selectionSort(int[] list) {
