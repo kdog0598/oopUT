@@ -16,7 +16,9 @@ public class Objects {
      */
     public static void main(String[] args) {
         Circle c1 = new Circle(5);
+        Circle c2 = new Circle();
         System.out.println(c1.radius + " " + c1.getArea());
+        System.out.println(c2.getRadius());
         
     }
     
@@ -30,6 +32,10 @@ class Circle {
     
     Circle(double newRadius) {
         radius = newRadius;
+    }
+    
+    double getRadius(){
+        return radius;
     }
     
     double getArea() {
