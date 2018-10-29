@@ -6,6 +6,7 @@
 package homework3;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  *
@@ -17,6 +18,12 @@ public class Homework3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+//        loan();
+//        printMatrix(5);
+        checkSort();
+    }
+    
+    public static void loan() {
         Scanner input = new Scanner(System.in);
         System.out.print("Input loan amount: ");
         double loanAmount = input.nextDouble();
@@ -60,6 +67,45 @@ public class Homework3 {
             
             System.out.format(i + "\t\t" + "%.2f" + "\t\t" + "%.2f" + "\t\t" + "%.2f%n", interest, principal, balance);
         }
+    }
+    
+    public static void printMatrix(int n) {
+        
+    }
+    
+    public static void checkSort() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input number of items: ");
+        int arraySize = input.nextInt();
+        int testSort [] = new int[arraySize];
+        
+
+        System.out.print("Input numbers in array. (i.e. 4 enter 8 enter): ");
+
+        for (int i = 0 ; i < testSort.length; i++ ) {
+           testSort[i] = input.nextInt();
+        }
+        
+        int [] sorted = Arrays.copyOf(testSort, testSort.length);
+        Arrays.sort(sorted);
+        for( int i = 0; i < sorted.length/2; ++i ) { 
+            int temp = sorted[i]; 
+            sorted[i] = sorted[sorted.length - i - 1]; 
+            sorted[sorted.length - i - 1] = temp; 
+        }
+        if (Arrays.equals(testSort, sorted) == true){
+            System.out.println("The list is already sorted.");
+        }
+        else {
+            System.out.println("The list is not sorted.");
+        }
+        System.out.println(Arrays.toString(testSort));
+        System.out.println(Arrays.toString(sorted));
+        
+        
+        
+        
+        
     }
     
 }
