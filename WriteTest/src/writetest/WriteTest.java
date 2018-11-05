@@ -7,6 +7,7 @@ package writetest;
 
 import java.io.*;
 import java.util.Arrays;
+import java.nio.file.*;
 
 public class WriteTest {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class WriteTest {
         String job = null;
         String nickname = null;
         write.main(name, phone_number, email,address,job,nickname);
+        write.main("James", "0123456789", "email@email.com",null,null,null);
         read.main();
     }
 }
@@ -50,16 +52,28 @@ class read {
     public static void main(){
         String userprofile = System.getenv("USERPROFILE");
         String fileName = userprofile + "\\Desktop\\temp\\temp.txt";
+        Path path = Paths.get(fileName);
+        long lineCount = 0;
+        try{
+            lineCount = Files.lines(path).count();
+            
+        } catch(IOException ex){
+            
+        }
         try {
             FileReader fileReader = new FileReader (fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String in;
+            String[][] contacts = new String[(int)lineCount][6];
             while ((in = bufferedReader.readLine()) != null) {
-//                String[] ab = in
-//                System.out.println(in);
-                String[] ar = in.split(",");
-                System.out.println(Arrays.toString(ar));
-                System.out.println(ar[1]);
+                for (int i=0; i < lineCount; i++){
+                    for (int j=0; j<6; j++){
+                        contacts[i] = in.split(",");
+                    }
+                }
+//                String[] ar = in.split(",");
+                System.out.println(Arrays.toString(contacts));
+                System.out.println(Arrays.toString(contacts[1]));
                 
             }
         }
